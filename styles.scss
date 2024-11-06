@@ -80,7 +80,6 @@ body {
                     width: max-content;
                     height: max-content;
                     border: black 1px;
-                    border-radius: 15px;
                     outline: none;
                     font-size: 16px;
                     padding: 2px;
@@ -167,7 +166,7 @@ body {
                 .logo-def {
                     width: 128px;
                     height: 128px;
-                    position: fixed;
+                    position: relative;
                     cursor: pointer;
                     place-content: center;
                 }
@@ -190,15 +189,16 @@ body {
         }
     }
     .main {
-        background-color: #ffffff;
+        background: #f5f5f5;
         color: #222222;
         width: 100%;
-        height: 64px;
+        height: auto;
         margin: 0px;
         position: relative;
         display: flex;
         align-items: center;
         flex-direction: column;
+        gap: 20px;
         .main-navi {
             display: flex;
             width: 100%;
@@ -227,20 +227,25 @@ body {
             color: white;
             width: 100%;
             height: fit-content;
+            max-height: 500px;
             display: flex;
             position: relative;
+            justify-content: center;
+            gap: 128px;
             .hero-desc {
                 width: 500px;
-                margin: 78px 256px 78px 256px;
                 display: flex;
                 flex-direction: column;
                 gap: 32px;
+                align-items: left;
+                justify-content: center;
                 h2 {
                     font-size: 42px;
                     text-decoration: none;
                 }
                 p {
                     text-decoration: none;
+                }
                 }
                 .main-button {
                     position: relative;
@@ -255,6 +260,9 @@ body {
                         border: #ffffff solid 2px;
                         border-radius: 15px;
                         transition: 150ms;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
                     }
                 
                     .m-button:hover {
@@ -269,6 +277,9 @@ body {
                         color: #ffffff;
                         border-radius: 15px;
                         transition: 150ms;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
                     }
                 
                     .m-button:focus {
@@ -281,9 +292,411 @@ body {
                         color: #ffffff;
                         border-radius: 15px;
                         transition: 150ms;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
                     }
                 }
             }
-        }   
+        .hero-image-sec {
+            position:relative;
+            width: 512px;
+            height: fit-content;            
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            margin: 0;   
+            .hero-image-content {
+                position: relative;
+                // width: 465px + 100px;
+                // height: 465px + 100px;            
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                margin: 0;
+                padding: 16px;
+                // background: #ff8ce27c;
+                // border-radius: 999px;
+                .hero-image {
+                    position: relative;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0;
+                    padding: 0;
+                }
+                .hero-image-subcontent {
+                    position: relative;
+                    width: 465px;
+                    height: 465px;            
+                    align-items: center;
+                    justify-content: center;
+                    display: flex;
+                    // margin: 0;
+                    // background: #fc7fdd7c;
+                    // border-radius: 999px;
+                    .h1 {
+                        position: relative;
+                    }
+                }
+            }
+        }
+        .main-special {
+            flex-direction: column;
+            width: 100%;
+            height: 512px;
+            display: flex;
+            margin: 8px 0px 8px 0px;
+            // padding: 0px 256px 0px 256px;
+            position: relative;
+            float: left;
+            justify-content: center;
+            gap: 20px;
+            .artiofsec {
+                width: 100%;
+                display: flex;
+                position: relative;
+                height: fit-content;
+                padding: 0px 394px 0px 394px;
+                h1{
+                    width: fit-content;
+                    position: relative;
+                    display: flex;
+                    text-align: left;
+                }
+            }
+            .main-special-sec {
+                width: 100%;
+                display: flex;
+                position: relative;    
+                gap: 32px;
+                align-items: center;
+                justify-content: center;
+                .main-special-card {
+                    background: #fff;
+                    flex-direction: column;
+                    display: flex;
+                    position: relative;
+                    height: 328px;
+                    width: 256px;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0px 4px 0px 4px;
+                    gap: 8px;
+                    p {
+                        font-size: medium;
+                        text-align: center;
+                    }
+
+                    
+                    .main-special-card-button {
+                        width: 152px;
+                        height: 32px;
+                        background-color: #f537c5;
+                        font-weight: 400;
+                        color: #fff;
+                        border: #f537c5 solid 1px;
+                        border-radius: 15px;
+                        transition: 150ms;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                
+                    .main-special-card-button:hover {
+                        cursor: pointer;
+                        width: 152px;
+                        height: 32px;
+                        font-weight: 400;
+                        background: #fa3993;
+                        transform: translateY(1px);
+                        border: #f537c6af solid 1px;
+                        color: black;
+                        border-radius: 15px;
+                        transition: 150ms;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                
+                    .main-special-card-button:focus {
+                        width: 152px;
+                        height: 32px;
+                        font-weight: 400;
+                        background: #fa3993;
+                        border: #f537c6af solid 1px;
+                        color: black;
+                        border-radius: 15px;
+                        transition: 150ms;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+        .main-adver-sec {
+            padding: 0;
+            margin: 0;
+            position: relative;
+            display: flex;
+            .adver-card-sec {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 32px;
+                .adver-main-card {
+                    width: 540px;
+                    height: 212px;
+                    background: #fa3993;
+                    color: #ffffff;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    padding: 35px 40px 35px 40px;
+                    h2 {
+                        width: fit-content;
+                        height: fit-content;
+                        font-size: 16px;
+                    }
+                    p {
+                        width: fit-content;
+                        height: fit-content;
+                        font-size: 14px;
+                    }
+                    .adver-button {
+                        display: flex;
+                        position: relative;
+                        width: 170px;
+                        height: 35px;
+                        .adv-button {
+                            position: relative;
+                            width: 170px;
+                            height: 35px;
+                            background: #fa3993;
+                            font-weight: 400;
+                            color: #ffffff;
+                            border: #ffffff solid 2px;
+                            border-radius: 20px;
+                            transition: 150ms;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                        .adv-button:hover {
+                            cursor: pointer;
+                            position: relative;
+                            width: 170px;
+                            height: 35px;
+                            background: #fa3993;
+                            font-weight: 400;
+                            color: #ffffff;
+                            border: #ffffff solid 2px;
+                            border-radius: 20px;
+                            transition: 150ms;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            transform: translateY(1px);
+                        }
+                        .adv-button:focus {
+                            position: relative;
+                            width: 170px;
+                            height: 35px;
+                            background: #fa3993;
+                            font-weight: 400;
+                            color: #ffffff;
+                            border: #ffffff solid 2px;
+                            border-radius: 20px;
+                            transition: 150ms;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                    }
+                    .adver-card-Inpu {
+                        outline: none;
+                        justify-content: center;
+                        align-items: center;
+                        width: 225px;
+                        height: 35px;
+                        border-radius: 20px;
+                        display: flex;
+                        background: #fff;
+                        border: none;
+                        .adver-card-inpu {
+                            background: none;
+                            display: flex;
+                            position: relative;
+                            width: 225px;
+                            height: 35px;
+                            font-size: 14px;
+                            color: #000;
+                            border: none;
+                            padding: 12px;
+                            outline: none;
+                        }
+                    }
+                }
+            }
+        }
+        .main-gallery-sec {
+            display: flex;
+            width: 100%;
+            height: fit-content;
+            position: relative;
+            justify-content: center;
+            .main-gallery {
+                position: relative;
+                width: 1112px;
+                display: flex;
+                flex-wrap: wrap;
+                .gallery-card {
+                    width: 278px;
+                    height: 52px;
+                    .gallery-img {
+                        width: 278px;
+                        height: 52px;
+                    }
+                }
+            }
+        }
+    }
+    .footer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .footer-content {
+            flex-direction: column;
+            position: relative;
+            display: flex;
+            width: 1112px;
+            margin: 32px 0px 0px 0px;
+            hr {
+                color: #cbcbcb7e;
+                width: auto;
+            }
+            gap: 32px;
+            .footer-navi {
+                color: #000;
+                display: flex;
+                position: relative;
+                gap: 32px;
+                hr {
+                    color: #cbcbcb7e;
+                    width: auto;
+                }
+                h3 {
+                    font-size: 16px;
+                    width: 128px;
+                    height: auto;
+                }
+                .footer-navi-card {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 32px;
+                    width: 256px;
+                    height: fit-content;
+                    .footer-navi-list {
+                        list-style: none;
+                        li {
+                            font-size: 12px;
+                            font-weight: 400;
+                            margin: 8px;
+                            color: #5c5c5c;
+                        }
+                    }
+                }
+            }
+            .footer-contact {
+                display: flex;
+                position: relative;
+                width: 100%;
+                align-items: center;
+                justify-content: space-between;
+                .footer-contact-media {
+                    display: flex;
+                    width: 236px;
+                    height: 45px;
+                    gap: 16px;
+                    .footer-media-content {
+                        justify-content: center;
+                        align-items: center;
+                        position: relative;
+                        display: flex;
+                        width: 32px;
+                        height: 32px;
+                        border: #fa3993 2px solid;
+                        border-radius: 8px;
+                        .ico {
+                            color: #fa3993;
+                        }
+                    }
+                }
+                .footer-contact-aboutus {
+                    display: flex;
+                    flex-direction: row;
+                    position: relative;
+                    width: fit-contents;
+                    height: fit-content;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 84px;
+                    p {
+                        width: fit-content;
+                        height: fit-content;
+                    }
+                    .footer-button {
+                        position: relative;
+                        padding: 0;
+                        margin: 0;
+                        .f-button {
+                            position: relative;
+                            width: 158px;
+                            height: 32px;
+                            background: #bbbbbb00;
+                            font-weight: 400;
+                            color: #000000;
+                            border: #fa3993 solid 2px;
+                            border-radius: 15px;
+                            transition: 150ms;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                        .f-button:hover {
+                            cursor: pointer;
+                            transform: translateY(1px);
+                            position: relative;
+                            width: 158px;
+                            height: 32px;
+                            background: #bbbbbb00;
+                            font-weight: 400;
+                            color: #000000;
+                            border: #fa3993 solid 2px;
+                            border-radius: 15px;
+                            transition: 150ms;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                        .f-button:focus {
+                            position: relative;
+                            width: 158px;
+                            height: 32px;
+                            background: #bbbbbb00;
+                            font-weight: 400;
+                            color: #000000;
+                            border: #fa3993 solid 2px;
+                            border-radius: 15px;
+                            transition: 150ms;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
