@@ -3,7 +3,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Roboto", "sans-serif";
+    // font-size: 1rem !important;
 }
+
+html {
+    font-size: 0.8333vw;
+}
+
 body {
     flex-direction: column;
     display: flex;
@@ -12,26 +18,28 @@ body {
         color: #222222;
         width: 100%;
         height: auto;
-        margin: 0px;
+        margin: 0rem;
         position: relative;
         display: flex;
         align-items: center;
         flex-direction: column;
+        // animation: 6s ease-in infinite opacityAnim;
+        animation: 7s ease-in infinite positionLtoR;
         .cat-logo {
-            width: 64px;
-            height: 64px;
+            width: 4rem;
+            height: 4rem;
             position: relative;
             cursor: pointer;
         }
     
         .header-navi {
             width: 100%;
-            margin: 0px;
+            margin: 0rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 48px;
-            border-bottom: #222222 solid 1px;
+            height: 3rem;
+            border-bottom: #222222 solid 0.0625rem;
             position: relative;
             .header-navi-p {
                 font-weight: 300;
@@ -39,15 +47,15 @@ body {
                 height: max-content;
                 align-items: center;
                 justify-content: center;
-                padding: 0px 12px 0px 12px;
+                padding: 0rem 0.75rem 0rem 0.75rem;
             }
         
             .header-navi-p:hover {
-                padding: 0px;
+                padding: 0rem;
                 font-weight: 300;
                 text-decoration: underline;
                 cursor: pointer;
-                padding: 0px 12px 0px 12px;
+                padding: 0rem 0.75rem 0rem 0.75rem;
                 height: max-content;
             }
         }
@@ -57,7 +65,7 @@ body {
             display: flex;
             align-items: center;
             justify-content: space-evenly;
-            height: 64px;
+            height: 4rem;
         }
         
         .header-input {
@@ -65,79 +73,111 @@ body {
             justify-content: center;
             align-items: center;
             .search-bar {
-                outline: none;
-                justify-content: center;
-                align-items: center;
-                height: max-content;
-                border-radius: 15px;
+                position: relative;
+                width: fit-content;
+                height: fit-content;
                 display: flex;
-                background: #c5c5c5;
-                border: none;
-                gap: 8px;
-                padding: 8px;
-                .search-Inpu {
-                    background: #c5c5c5;
-                    width: max-content;
-                    height: max-content;
-                    border: black 1px;
-                    outline: none;
-                    font-size: 16px;
-                    padding: 2px;
-                .search-Inpu:hover {
-                    background: #c5c5c5;
-                    width: max-content;
-                    height: max-content;
-                    outline: none;
-                    padding: 2px;
+                align-items: right;
+            // .search-bar::before {
+            //     content: '';
+            //     position: absolute;
+            //     top: 0;
+            //     left: 0;
+            //     width: 10px;
+            //     height: 100%;
+            //     background: linear-gradient(#fff, #fff, #e3e3e3);
+            //     z-index: 1;
+            //     filter: blur(1px);
+            // }
+            // .search-bar::after {
+            //     content: '';
+            //     position: absolute;
+            //     top: 0;
+            //     right: -1px;
+            //     width: 10px;
+            //     height: 100%;
+            //     background: #9d9d9d;
+            //     z-index: 1;
+            //     filter: blur(1px);
+            // }
+                .shadow {
+                    position: absolute;
+                    width: calc(100% + 3.125rem) ;
+                    height: 18.75rem;
+                    background: linear-gradient(180deg, rgba(0,0,0,0.1),
+                    transparent, transparent);
+                    top: 0;
+                    left: -3.125rem;
+                    transform-origin: top;
+                    transform: skew(45deg);
+                    pointer-events: none;
                 }
-                .search-Inpu:focus {
-                    background: #c5c5c5;
-                    outline: none;
-                    width: 1fr;
-                    height: max-content;
-                    padding: 2px;
+
+                .shadow::before {
+                    content: '';
+                    position: absolute;
+                    width: 3.125rem;
+                    height: 3.125rem;
+                    background: #fff;
+                    z-index: 1;
                 }
-                    .search-bar-ico {
-                        position: absolute;
-                        color: #555;
-                        font-size: 1.5em;
-                    }
+
+                .search-bar-ico {
+                    position: relative;
+                    display: flex;
+                    float: left;
+                    z-index: 2;
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    color: #555;
+                    font-size: 1.5em;
+                    margin: 0.5rem;
+                }
+
+                .search-Inpu {  
+                    border: none;
+                    padding: 0.625rem 1.5625rem;
+                    outline: none;
+                    font-size: 1.1em;
+                    color: #555;
+                    background: linear-gradient(#ececf0, #d1d7e7);
                 }
             }
         }
+    }
 
         .header-button {
-            width: 122px;
-            height: 32px;
+            width: 7.625rem;
+            height: 2rem;
             background-color: #bbbbbb00;
             font-weight: 400;
             color: black;
-            border: #f537c5 solid 1px;
-            border-radius: 15px;
+            border: #f537c5 solid 0.0625rem;
+            border-radius: 0.9375rem;
             transition: 150ms;
         }
     
         .header-button:hover {
             cursor: pointer;
-            width: 122px;
-            height: 32px;
+            width: 7.625rem;
+            height: 2rem;
             font-weight: 400;
             background-color: #fa3993;
-            transform: translateY(1px);
-            border: #f537c6af solid 1px;
+            transform: translateY(0.0625rem);
+            border: #f537c6af solid 0.0625rem;
             color: black;
-            border-radius: 15px;
+            border-radius: 0.9375rem;
             transition: 150ms;
         }
     
         .header-button:focus {
-            width: 122px;
-            height: 32px;
+            width: 7.625rem;
+            height: 2rem;
             font-weight: 400;
             background-color: #fa3993;
-            border: #f537c6af solid 1px;
+            border: #f537c6af solid 0.0625rem;
             color: black;
-            border-radius: 15px;
+            border-radius: 0.9375rem;
             transition: 150ms;
         }
     
@@ -147,25 +187,25 @@ body {
             align-items: center;
             padding: 0;
             margin: 0;
-            width: 64px;
-            height: 64px;
+            width: 4rem;
+            height: 4rem;
         }
-        .header-sub {
+            .header-sub {
             display: flex;
             width: 100%;
             justify-content: center;
-            padding: 0px 42px 0px 42px;
-            gap: 96px;
+            padding: 0rem 2.625rem 0rem 2.625rem;
+            gap: 6rem;
             margin-top: 1px;
             background-color: fff;
-            border-bottom: #cecece80 solid 1px;
+            border-bottom: #cecece80 solid 0.0625rem;
             .logo-place {
                 display: flex;
-                width: 128px;
-                height: 128px;
+                width: 8rem;
+                height: 8rem;
                 .logo-def {
-                    width: 128px;
-                    height: 128px;
+                    width: 8rem;
+                    height: 8rem;
                     position: relative;
                     cursor: pointer;
                     place-content: center;
@@ -193,54 +233,53 @@ body {
         color: #222222;
         width: 100%;
         height: auto;
-        margin: 0px;
+        margin: 0rem;
         position: relative;
         display: flex;
         align-items: center;
         flex-direction: column;
-        gap: 20px;
+        gap: 1.25rem;
         .main-navi {
             display: flex;
             width: 100%;
-            height: 64px;
+            height: 4rem;
             justify-content: center;
             align-items: center;
-            margin: 24px 0px 24px 0px;
+            margin: 1.5rem 0rem 1.5rem 0rem;
             .main-navi-p {
                 align-items:center;
-                padding: 0px 42px 0px 42px;
+                padding: 0rem 2.625rem 0rem 2.625rem;
             }
             .main-navi-p:hover {
                 align-items:center;
-                padding: 0px 42px 0px 42px;
+                padding: 0rem 2.625rem 0rem 2.625rem;
                 text-decoration: underline;
                 cursor: pointer;
             }
             .main-navi-p:focus {
                 align-items:center;
-                padding: 0px 42px 0px 42px;
+                padding: 0rem 2.625rem 0rem 2.625rem;
                 text-decoration: underline;
             }
         }
         .hero-sec {
-            background: #fa3993;
+            background-image: url(public/png/Rectangle_2.png);
             color: white;
             width: 100%;
-            height: fit-content;
-            max-height: 500px;
+            height: 37.75rem;
             display: flex;
             position: relative;
             justify-content: center;
-            gap: 128px;
+            gap: 8rem;
             .hero-desc {
-                width: 500px;
+                width: 31.25rem;
                 display: flex;
                 flex-direction: column;
-                gap: 32px;
+                gap: 2rem;
                 align-items: left;
                 justify-content: center;
                 h2 {
-                    font-size: 42px;
+                    font-size: 2.625rem;
                     text-decoration: none;
                 }
                 p {
@@ -249,16 +288,16 @@ body {
                 }
                 .main-button {
                     position: relative;
-                    padding: 12px;
+                    padding: 0.75rem;
                     .m-button {
                         position: relative;
-                        width: 158px;
-                        height: 32px;
+                        width: 9.875rem;
+                        height: 2rem;
                         background: #bbbbbb00;
                         font-weight: 400;
                         color: #ffffff;
-                        border: #ffffff solid 2px;
-                        border-radius: 15px;
+                        border: #ffffff solid 0.125rem;
+                        border-radius: 0.9375rem;
                         transition: 150ms;
                         display: flex;
                         justify-content: center;
@@ -268,14 +307,14 @@ body {
                     .m-button:hover {
                         cursor: pointer;
                         position: relative;
-                        width: 158px;
-                        height: 32px;
+                        width: 9.875rem;
+                        height: 2rem;
                         font-weight: 400;
                         background: #fa3993;
-                        transform: translateY(1px);
-                        border: #ffffff solid 2px;
+                        transform: translateY(0.0625rem);
+                        border: #ffffff solid 0.125rem;
                         color: #ffffff;
-                        border-radius: 15px;
+                        border-radius: 0.9375rem;
                         transition: 150ms;
                         display: flex;
                         justify-content: center;
@@ -284,13 +323,13 @@ body {
                 
                     .m-button:focus {
                         position: relative;
-                        width: 158px;
-                        height: 32px;
+                        width: 9.875rem;
+                        height: 2rem;
                         font-weight: 400;
                         background: #fa3993;
-                        border: #ffffff solid 2px;
+                        border: #ffffff solid 0.125rem;
                         color: #ffffff;
-                        border-radius: 15px;
+                        border-radius: 0.9375rem;
                         transition: 150ms;
                         display: flex;
                         justify-content: center;
@@ -300,8 +339,8 @@ body {
             }
         .hero-image-sec {
             position:relative;
-            width: 512px;
-            height: fit-content;            
+            width: 32rem;
+            height: auto;            
             align-items: center;
             justify-content: center;
             display: flex;
@@ -314,7 +353,7 @@ body {
                 justify-content: center;
                 display: flex;
                 margin: 0;
-                padding: 16px;
+                padding: 1rem;
                 // background: #ff8ce27c;
                 // border-radius: 999px;
                 .hero-image {
@@ -326,8 +365,8 @@ body {
                 }
                 .hero-image-subcontent {
                     position: relative;
-                    width: 465px;
-                    height: 465px;            
+                    width: 29.0625rem;
+                    height: 29.0625rem;            
                     align-items: center;
                     justify-content: center;
                     display: flex;
@@ -343,20 +382,20 @@ body {
         .main-special {
             flex-direction: column;
             width: 100%;
-            height: 512px;
+            height: 32rem;
             display: flex;
-            margin: 8px 0px 8px 0px;
+            margin: 0.5rem 0rem 0.5rem 0rem;
             // padding: 0px 256px 0px 256px;
             position: relative;
             float: left;
             justify-content: center;
-            gap: 20px;
+            gap: 1.25rem;
             .artiofsec {
                 width: 100%;
                 display: flex;
                 position: relative;
                 height: fit-content;
-                padding: 0px 394px 0px 394px;
+                padding: 0rem 24.625rem 0rem 24.625rem;
                 h1{
                     width: fit-content;
                     position: relative;
@@ -368,20 +407,22 @@ body {
                 width: 100%;
                 display: flex;
                 position: relative;    
-                gap: 32px;
+                gap: 2rem;
                 align-items: center;
                 justify-content: center;
+                animation-name: MyTask;
+                animation: 2s ease-out 1 MyTask; 
                 .main-special-card {
                     background: #fff;
                     flex-direction: column;
                     display: flex;
                     position: relative;
-                    height: 328px;
-                    width: 256px;
+                    height: 20.5rem;
+                    width: 16rem;
                     align-items: center;
                     justify-content: center;
-                    padding: 0px 4px 0px 4px;
-                    gap: 8px;
+                    padding: 0rem 0.25rem 0rem 0.25rem;
+                    gap: 0.5rem;
                     p {
                         font-size: medium;
                         text-align: center;
@@ -389,13 +430,13 @@ body {
 
                     
                     .main-special-card-button {
-                        width: 152px;
-                        height: 32px;
+                        width: 9.5rem;
+                        height: 2rem;
                         background-color: #f537c5;
                         font-weight: 400;
                         color: #fff;
-                        border: #f537c5 solid 1px;
-                        border-radius: 15px;
+                        border: #f537c5 solid 0.0625rem;
+                        border-radius: 0.9375rem;
                         transition: 150ms;
                         display: flex;
                         justify-content: center;
@@ -404,14 +445,14 @@ body {
                 
                     .main-special-card-button:hover {
                         cursor: pointer;
-                        width: 152px;
-                        height: 32px;
+                        width: 9.5rem;
+                        height: 2rem;
                         font-weight: 400;
                         background: #fa3993;
-                        transform: translateY(1px);
-                        border: #f537c6af solid 1px;
+                        transform: translateY(0.0625rem);
+                        border: #f537c6af solid 0.0625rem;
                         color: black;
-                        border-radius: 15px;
+                        border-radius: 0.9375rem;
                         transition: 150ms;
                         display: flex;
                         justify-content: center;
@@ -419,13 +460,13 @@ body {
                     }
                 
                     .main-special-card-button:focus {
-                        width: 152px;
-                        height: 32px;
+                        width: 9.5rem;
+                        height: 2rem;
                         font-weight: 400;
                         background: #fa3993;
-                        border: #f537c6af solid 1px;
+                        border: #f537c6af solid 0.0625rem;
                         color: black;
-                        border-radius: 15px;
+                        border-radius: 0.9375rem;
                         transition: 150ms;
                         display: flex;
                         justify-content: center;
@@ -444,40 +485,40 @@ body {
                 flex-direction: row;
                 justify-content: center;
                 align-items: center;
-                gap: 32px;
+                gap: 2rem;
                 .adver-main-card {
-                    width: 540px;
-                    height: 212px;
+                    width: 33.75rem;
+                    height: 13.25rem;
                     background: #fa3993;
                     color: #ffffff;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-around;
-                    padding: 35px 40px 35px 40px;
+                    padding: 2.1875rem 2.5rem 2.1875rem 2.5rem;
                     h2 {
                         width: fit-content;
                         height: fit-content;
-                        font-size: 16px;
+                        font-size: 1rem;
                     }
                     p {
                         width: fit-content;
                         height: fit-content;
-                        font-size: 14px;
+                        font-size: 0.875rem;
                     }
                     .adver-button {
                         display: flex;
                         position: relative;
-                        width: 170px;
-                        height: 35px;
+                        width: 10.625rem;
+                        height: 2.1875rem;
                         .adv-button {
                             position: relative;
-                            width: 170px;
-                            height: 35px;
+                            width: 10.625rem;
+                            height: 2.1875rem;
                             background: #fa3993;
                             font-weight: 400;
                             color: #ffffff;
-                            border: #ffffff solid 2px;
-                            border-radius: 20px;
+                            border: #ffffff solid 0.125rem;
+                            border-radius: 1.25rem;
                             transition: 150ms;
                             display: flex;
                             justify-content: center;
@@ -486,27 +527,27 @@ body {
                         .adv-button:hover {
                             cursor: pointer;
                             position: relative;
-                            width: 170px;
-                            height: 35px;
+                            width: 10.625rem;
+                            height: 2.1875rem;
                             background: #fa3993;
                             font-weight: 400;
                             color: #ffffff;
-                            border: #ffffff solid 2px;
-                            border-radius: 20px;
+                            border: #ffffff solid 0.125rem;
+                            border-radius: 1.25rem;
                             transition: 150ms;
                             display: flex;
                             justify-content: center;
                             align-items: center;
-                            transform: translateY(1px);
+                            transform: translateY(0.0625rem);
                         }
                         .adv-button:focus {
                             position: relative;
-                            width: 170px;
-                            height: 35px;
+                            width: 10.625rem;
+                            height: 2.1875rem;
                             background: #fa3993;
                             font-weight: 400;
                             color: #ffffff;
-                            border: #ffffff solid 2px;
+                            border: #ffffff solid 0.125rem;
                             border-radius: 20px;
                             transition: 150ms;
                             display: flex;
@@ -518,9 +559,9 @@ body {
                         outline: none;
                         justify-content: center;
                         align-items: center;
-                        width: 225px;
-                        height: 35px;
-                        border-radius: 20px;
+                        width: 14.0625rem;
+                        height: 2.1875rem;
+                        border-radius: 1.25rem;
                         display: flex;
                         background: #fff;
                         border: none;
@@ -528,12 +569,12 @@ body {
                             background: none;
                             display: flex;
                             position: relative;
-                            width: 225px;
-                            height: 35px;
-                            font-size: 14px;
+                            width: 14.0625rem;
+                            height: 2.1875rem;
+                            font-size: 0.875rem;
                             color: #000;
                             border: none;
-                            padding: 12px;
+                            padding: 0.75rem;
                             outline: none;
                         }
                     }
@@ -548,15 +589,15 @@ body {
             justify-content: center;
             .main-gallery {
                 position: relative;
-                width: 1112px;
+                width: 69.5rem;
                 display: flex;
                 flex-wrap: wrap;
                 .gallery-card {
-                    width: 278px;
-                    height: 52px;
+                    width: 17.375rem;
+                    height: 3.25rem;
                     .gallery-img {
-                        width: 278px;
-                        height: 52px;
+                        width: 17.375rem;
+                        height: 3.25rem;
                     }
                 }
             }
@@ -570,39 +611,39 @@ body {
             flex-direction: column;
             position: relative;
             display: flex;
-            width: 1112px;
-            margin: 32px 0px 0px 0px;
+            width: 69.5rem;
+            margin: 2rem 0rem 0rem 0rem;
             hr {
                 color: #cbcbcb7e;
                 width: auto;
             }
-            gap: 32px;
+            gap: 2rem;
             .footer-navi {
                 color: #000;
                 display: flex;
                 position: relative;
-                gap: 32px;
+                gap: 2rem;
                 hr {
                     color: #cbcbcb7e;
                     width: auto;
                 }
                 h3 {
-                    font-size: 16px;
-                    width: 128px;
+                    font-size: 1rem;
+                    width: 8rem;
                     height: auto;
                 }
                 .footer-navi-card {
                     display: flex;
                     flex-direction: column;
-                    gap: 32px;
-                    width: 256px;
+                    gap: 2rem;
+                    width: 16rem;
                     height: fit-content;
                     .footer-navi-list {
                         list-style: none;
                         li {
-                            font-size: 12px;
+                            font-size: 0.75rem;
                             font-weight: 400;
-                            margin: 8px;
+                            margin: 0.5rem;
                             color: #5c5c5c;
                         }
                     }
@@ -616,18 +657,18 @@ body {
                 justify-content: space-between;
                 .footer-contact-media {
                     display: flex;
-                    width: 236px;
-                    height: 45px;
-                    gap: 16px;
+                    width: 14.75rem;
+                    height: 2.8125rem;
+                    gap: 1rem;
                     .footer-media-content {
                         justify-content: center;
                         align-items: center;
                         position: relative;
                         display: flex;
-                        width: 32px;
-                        height: 32px;
-                        border: #fa3993 2px solid;
-                        border-radius: 8px;
+                        width: 2rem;
+                        height: 2rem;
+                        border: #fa3993 0.125rem solid;
+                        border-radius: 0.5rem;
                         .ico {
                             color: #fa3993;
                         }
@@ -641,7 +682,7 @@ body {
                     height: fit-content;
                     justify-content: center;
                     align-items: center;
-                    gap: 84px;
+                    gap: 5.25rem;
                     p {
                         width: fit-content;
                         height: fit-content;
@@ -652,13 +693,13 @@ body {
                         margin: 0;
                         .f-button {
                             position: relative;
-                            width: 158px;
-                            height: 32px;
+                            width: 9.875rem;
+                            height: 2rem;
                             background: #bbbbbb00;
                             font-weight: 400;
                             color: #000000;
-                            border: #fa3993 solid 2px;
-                            border-radius: 15px;
+                            border: #fa3993 solid 0.125rem;
+                            border-radius: 0.9375rem;
                             transition: 150ms;
                             display: flex;
                             justify-content: center;
@@ -666,15 +707,15 @@ body {
                         }
                         .f-button:hover {
                             cursor: pointer;
-                            transform: translateY(1px);
+                            transform: translateY(0.0625rem);
                             position: relative;
-                            width: 158px;
-                            height: 32px;
+                            width: 9.875rem;
+                            height: 2rem;
                             background: #bbbbbb00;
                             font-weight: 400;
                             color: #000000;
-                            border: #fa3993 solid 2px;
-                            border-radius: 15px;
+                            border: #fa3993 solid 0.125rem;
+                            border-radius: 0.9375rem;
                             transition: 150ms;
                             display: flex;
                             justify-content: center;
@@ -682,13 +723,13 @@ body {
                         }
                         .f-button:focus {
                             position: relative;
-                            width: 158px;
-                            height: 32px;
+                            width: 9.875rem;
+                            height: 2rem;
                             background: #bbbbbb00;
                             font-weight: 400;
                             color: #000000;
-                            border: #fa3993 solid 2px;
-                            border-radius: 15px;
+                            border: #fa3993 solid 0.125rem;
+                            border-radius: 0.9375rem;
                             transition: 150ms;
                             display: flex;
                             justify-content: center;
@@ -699,4 +740,87 @@ body {
             }
         }
     }
-}
+
+    // @keyframes opacityAnim {
+    //     0% {
+    //         opacity: 0;
+    //         background-color: #000;
+    //     }
+    //     20% {
+    //         opacity: 1;
+    //         background-color: #f537c5;
+    //     }
+    //     40% {
+    //         opacity: 0;
+    //     }
+    //     60% {
+    //         opacity: 1;
+    //     }
+    //     80% {
+    //         opacity: 0.5;
+    //     }
+    //     100% {
+    //         opacity: 0;
+    //     }
+    // }
+    @keyframes positionLtoR {
+        from {
+            position: absolute;
+            left: -100%;
+            top: 0;
+        } 
+        to {
+            position: absolute;
+            right: -100%;
+            top: 0;
+        }
+    }
+
+    @keyframes MyTask {
+        from {
+            right: -100%;
+            opacity: 0;
+        }
+        to {
+            right: 0%;
+            opacity: 1;
+        }
+    }
+    @media (992px <= width <=1200px) {
+        .main-special {
+            flex-direction: column;
+            width: 100%;
+            height: 32rem;
+            display: flex;
+            margin: 0.5rem 0rem 0.5rem 0rem;
+            // padding: 0px 256px 0px 256px;
+            position: relative;
+            float: left;
+            justify-content: center;
+            gap: 1.25rem;
+            .main-special-sec {
+                width: 100%;
+                    display: flex;
+                    position: relative;    
+                    gap: 2rem;
+                    align-items: center;
+                    justify-content: center;
+                    animation: 1s ease 1 MyTask; 
+                    
+            }
+        }
+        @keyframes MyTask {
+            from {
+                right: -100%;
+                opacity: 0;
+            }
+            20% {
+                opacity: 0;
+                background-color:#000;
+            }
+            to {
+                right: 0%;
+                opacity: 1;
+            }
+        }
+    }
